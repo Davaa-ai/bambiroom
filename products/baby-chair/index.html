@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)</title>
+  <meta name="description"
+    content="Хоолны болон үс, хөл угаах олон үйлдэлт хүүхдийн сандал. 3 үйлдэлт! ₮69,000. Үнэгүй хүргэлт.">
+  
+  <meta property="og:title" content="Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)">
+  <meta property="og:description"
+    content="Хооллох, үс болон хөл угаах зориулалттай олон үйлдэлт сандал. Одоо -47% хямдралтай!">
+  <meta property="og:image" content="/bambi_store_banner.png">
+  <meta property="og:type" content="product">
+  
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👶</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <script>
+    // Static-site friendly tracking config.
+    // Paste your real IDs here before deploying to GitHub Pages.
+    window.TRACKING_CONFIG = {
+      metaPixelId: '',
+      gaMeasurementId: '',
+      productId: 'baby-chair-3in1',
+      productName: 'Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)',
+      currency: 'MNT',
+      unitPrice: 69000
+    };
+  </script>
+  <script>
+    (function () {
+      const config = window.TRACKING_CONFIG || {};
+      const tracking = {
+        metaEnabled: false,
+        gaEnabled: false,
+        fired: {},
+        productId: config.productId || 'baby-chair-3in1',
+        productName: config.productName || 'Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)',
+        currency: config.currency || 'MNT',
+        unitPrice: Number(config.unitPrice) || 69000
+      };
+
+      window.__tracking = tracking;
+
+      function loadScript(src) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = src;
+        document.head.appendChild(script);
+      }
+
+      const pixelId = String(config.metaPixelId || '').trim();
+      if (pixelId) {
+        !function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = true;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = true;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', pixelId);
+        fbq('track', 'PageView');
+        tracking.metaEnabled = true;
+      }
+
+      const gaMeasurementId = String(config.gaMeasurementId || '').trim();
+      if (gaMeasurementId) {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', gaMeasurementId, { send_page_view: true });
+        loadScript('https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaMeasurementId));
+        tracking.gaEnabled = true;
+      }
+
+      function currentQuantity() {
+        return Math.max(1, Number(window.orderQty || 1));
+      }
+
+      function buildItem() {
+        return {
+          item_id: tracking.productId,
+          item_name: tracking.productName,
+          currency: tracking.currency,
+          price: tracking.unitPrice,
+          quantity: currentQuantity()
+        };
+      }
+
+      function buildPayload(extra) {
+        const quantity = currentQuantity();
+        return Object.assign({
+          product_id: tracking.productId,
+          product_name: tracking.productName,
+          currency: tracking.currency,
+          quantity: quantity,
+          value: quantity * tracking.unitPrice
+        }, extra || {});
+      }
+
+      function trackMeta(eventName, payload, isCustom) {
+        if (!tracking.metaEnabled || typeof window.fbq !== 'function') return;
+        if (isCustom) {
+          fbq('trackCustom', eventName, payload);
+          return;
+        }
+        fbq('track', eventName, payload);
+      }
+
+      function trackGA(eventName, payload) {
+        if (!tracking.gaEnabled || typeof window.gtag !== 'function') return;
+        gtag('event', eventName, payload);
+      }
+
+      window.buildTrackingPayload = buildPayload;
+      window.dispatchTrackingEvent = function (eventName, payload, options) {
+        const opts = options || {};
+        if (opts.onceKey && tracking.fired[opts.onceKey]) return;
+        if (opts.onceKey) tracking.fired[opts.onceKey] = true;
+
+        const basePayload = buildPayload(payload);
+        const item = buildItem();
+
+        switch (eventName) {
+          case 'view_content':
+            trackMeta('ViewContent', {
+              content_ids: [tracking.productId],
+              content_name: tracking.productName,
+              content_type: 'product',
+              currency: tracking.currency,
+              value: basePayload.value
+            });
+            trackGA('view_item', {
+              currency: tracking.currency,
+              value: basePayload.value,
+              items: [item]
+            });
+            break;
+
+          case 'begin_checkout':
+            trackMeta('InitiateCheckout', {
+              content_ids: [tracking.productId],
+              content_name: tracking.productName,
+              content_type: 'product',
+              num_items: basePayload.quantity,
+              currency: tracking.currency,
+              value: basePayload.value,
+              source: basePayload.source
+            });
+            trackGA('begin_checkout', {
+              currency: tracking.currency,
+              value: basePayload.value,
+              source: basePayload.source,
+              items: [item]
+            });
+            break;
+
+          case 'add_payment_info':
+            trackMeta('AddPaymentInfo', {
+              content_name: tracking.productName,
+              content_type: 'product',
+              currency: tracking.currency,
+              value: basePayload.value,
+              payment_method: basePayload.payment_method
+            });
+            trackGA('add_payment_info', {
+              currency: tracking.currency,
+              value: basePayload.value,
+              payment_type: basePayload.payment_method,
+              items: [item]
+            });
+            break;
+
+          case 'lead_submit':
+            trackMeta('Lead', {
+              content_name: tracking.productName,
+              currency: tracking.currency,
+              value: basePayload.value,
+              payment_method: basePayload.payment_method,
+              order_quantity: basePayload.quantity
+            });
+            trackGA('generate_lead', {
+              currency: tracking.currency,
+              value: basePayload.value,
+              payment_method: basePayload.payment_method,
+              order_quantity: basePayload.quantity
+            });
+            break;
+
+          case 'contact':
+            trackMeta('Contact', {
+              content_name: tracking.productName,
+              contact_channel: basePayload.channel || 'messenger',
+              payment_method: basePayload.payment_method
+            });
+            trackGA('contact', {
+              channel: basePayload.channel || 'messenger',
+              payment_method: basePayload.payment_method,
+              order_quantity: basePayload.quantity
+            });
+            break;
+
+          case 'cta_click':
+            trackMeta('CTAButtonClick', {
+              cta_source: basePayload.cta_source,
+              content_name: tracking.productName
+            }, true);
+            trackGA('cta_click', {
+              cta_source: basePayload.cta_source,
+              product_id: tracking.productId
+            });
+            break;
+
+          case 'copy_bank':
+            trackMeta('CopyBankAccount', {
+              content_name: tracking.productName
+            }, true);
+            trackGA('copy_bank_account', {
+              product_id: tracking.productId
+            });
+            break;
+        }
+      };
+    })();
+
+    window.trackOrderIntent = function(source) {
+      window.dispatchTrackingEvent('begin_checkout', { source: source }, { onceKey: 'checkout_' + source });
+    };
+
+    window.trackCopyBank = function() {
+      window.dispatchTrackingEvent('copy_bank', {});
+    };
+  </script>
+  <style>
+    /* ===== BABY PLANET 3 — PREMIUM THEME ===== */
+    :root {
+      --primary: #00D4C5;
+      --primary-soft: #E8FAF9;
+      --primary-dark: #009E93;
+      --accent: #EF7B84;
+      --accent-soft: #FFF0F1;
+      --warm: #685F52;
+      --warm-light: #A39887;
+      --bg: #F7F8FA;
+      --white: #ffffff;
+      --border: #EDEAE7;
+      --green: #16a34a;
+      --gold: #F8B84E;
+      --pink: #EF7B84;
+      --lavender: #C4B5E0;
+      --text: #2D2A26;
+      --text-secondary: #6B6560;
+      --text-muted: #A39E99;
+      --shadow-sm: 0 2px 8px rgba(104, 95, 82, 0.06);
+      --shadow-md: 0 4px 20px rgba(104, 95, 82, 0.08);
+      --shadow-lg: 0 8px 40px rgba(104, 95, 82, 0.12);
+      --shadow-teal: 0 4px 24px rgba(0, 212, 197, 0.2);
+    }
+
+    body {
+      background: var(--bg);
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+    }
+
+    /* ===== SECTIONS — Elevated card style ===== */
+    section {
+      box-shadow: var(--shadow-sm);
+      border-radius: 20px;
+      margin: 10px 10px;
+      padding-bottom: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .promo-tag {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    }
+
+    .bundle {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .bundle-tag {
+      background: var(--primary);
+    }
+
+    /* ===== TEAL CTA OVERRIDES ===== */
+    .submit-btn {
+      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      box-shadow: var(--shadow-teal) !important;
+      border-radius: 14px !important;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-scroll-btn {
+      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      box-shadow: var(--shadow-teal) !important;
+      border-radius: 14px !important;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-scroll-btn:hover {
+      box-shadow: 0 8px 32px rgba(0, 212, 197, 0.4) !important;
+      transform: translateY(-1px);
+    }
+
+    .bank-header {
+      background: linear-gradient(135deg, #00D4C5, #009E93) !important;
+    }
+
+    .step-badge {
+      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      box-shadow: 0 2px 8px rgba(0, 212, 197, 0.3);
+    }
+
+    /* ===== BABY DIVIDER — refined ===== */
+    .baby-divider {
+      text-align: center;
+      padding: 8px 0;
+      font-size: 12px;
+      letter-spacing: 14px;
+      color: var(--border);
+      user-select: none;
+    }
+
+    /* ===== EMOTIONAL HERO BANNER ===== */
+    .emotional-banner {
+      background: linear-gradient(160deg, var(--primary-soft) 0%, #FFF8F0 50%, var(--accent-soft) 100%);
+      padding: 28px 24px;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      margin: 0 10px 10px;
+      border: 1px solid rgba(0, 212, 197, 0.08);
+    }
+
+    .emotional-banner .emoji-row {
+      font-size: 28px;
+      letter-spacing: 8px;
+      margin-bottom: 12px;
+    }
+
+    .emotional-banner h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--warm);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .emotional-banner p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ===== PROBLEM → SOLUTION CARDS — Premium ===== */
+    .problem-solution {
+      padding: 0 16px 20px;
+    }
+
+    .ps-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ps-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--accent), var(--pink));
+      border-radius: 4px 0 0 4px;
+      opacity: 0.7;
+    }
+
+
+    .ps-card .ps-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--accent-soft), #FFF5F2);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(239, 123, 132, 0.1);
+    }
+
+
+    .ps-card .ps-text h4 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .ps-card .ps-text p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ===== SAVINGS COMPARISON — Premium ===== */
+    .savings-section {
+      padding: 0 16px 20px;
+    }
+
+    .savings-grid {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .savings-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(237, 234, 231, 0.6);
+      font-size: 14px;
+    }
+
+    .savings-item:last-child {
+      border-bottom: none;
+    }
+
+    .savings-item .s-name {
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+
+    .savings-item .s-price {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .savings-item .s-price.crossed {
+      text-decoration: line-through;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .savings-total {
+      margin-top: 16px;
+      background: linear-gradient(135deg, #00D4C5, #00B4A6);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: center;
+      color: #fff;
+      box-shadow: var(--shadow-teal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .savings-total::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 50%;
+    }
+
+    .savings-total .st-label {
+      font-size: 13px;
+      opacity: 0.9;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .savings-total .st-amount {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .savings-total .st-vs {
+      font-size: 13px;
+      opacity: 0.85;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    /* ===== MONGOLIAN MOM SCENARIOS — Premium ===== */
+    .scenario-cards {
+      padding: 0 16px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .scenario-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .scenario-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--lavender));
+      opacity: 0.6;
+    }
+
+    .scenario-card:nth-child(2)::before {
+      background: linear-gradient(90deg, var(--gold), var(--accent));
+    }
+
+    .scenario-card:nth-child(3)::before {
+      background: linear-gradient(90deg, var(--lavender), var(--pink));
+    }
+
+    .scenario-card:nth-child(4)::before {
+      background: linear-gradient(90deg, var(--primary), var(--green));
+    }
+
+    .scenario-card .sc-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .scenario-card .sc-body {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ===== SAFETY HIGHLIGHT — Premium Glass ===== */
+    .safety-section {
+      padding: 0 16px 20px;
+    }
+
+    .safety-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .safety-item {
+      background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);
+      border-radius: 16px;
+      padding: 22px 16px;
+      text-align: center;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+    }
+
+    .safety-item .si-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      background: var(--primary-soft);
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0, 212, 197, 0.1);
+    }
+
+    .safety-item .si-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--warm);
+      margin-bottom: 4px;
+    }
+
+    .safety-item .si-desc {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* ===== CTA VARIANTS ===== */
+    .cta-savings {
+      background: linear-gradient(160deg, var(--primary-soft), #FFF8F0);
+      border: 2px dashed rgba(0, 212, 197, 0.3);
+    }
+
+    .cta-savings .cta-urgency-text {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .cta-reviews {
+      background: linear-gradient(135deg, var(--accent-soft), #FFF8F0);
+    }
+
+    .cta-reviews .cta-social-text {
+      color: var(--warm);
+      font-weight: 700;
+      font-size: 13.5px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== PAYMENT OPTIONS ===== */
+    .payment-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .payment-option-label {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      cursor: pointer;
+      gap: 12px;
+      transition: all 0.25s ease;
+      background: var(--white);
+    }
+
+    .payment-option-label.active {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+      box-shadow: 0 2px 12px rgba(0, 212, 197, 0.1);
+    }
+
+    .payment-option-label input {
+      display: none;
+    }
+
+    .payment-radio {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+
+    .payment-option-label.active .payment-radio {
+      border-color: var(--primary);
+    }
+
+    .payment-option-label.active .payment-radio::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+
+    .payment-info {
+      flex: 1;
+    }
+
+    .payment-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .payment-desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .cod-message {
+      background: var(--accent-soft);
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      border-left: 4px solid var(--accent);
+      display: none;
+      line-height: 1.65;
+    }
+
+    /* ===== REVIEW PHOTO BADGE ===== */
+    .review-av-baby {
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .review-av img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== PRODUCT IMAGE PLACEHOLDERS ===== */
+    .gallery-placeholder {
+      flex: 0 0 100%;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+      background:
+        radial-gradient(circle at top left, rgba(0, 212, 197, 0.18), transparent 42%),
+        linear-gradient(160deg, #ffffff 0%, var(--primary-soft) 62%, #fff8f0 100%);
+    }
+
+    .gallery-placeholder-card {
+      width: 100%;
+      max-width: 340px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1.5px dashed rgba(0, 212, 197, 0.35);
+      border-radius: 24px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .gallery-placeholder-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+      padding: 0 12px;
+    }
+
+    .gallery-placeholder-icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .gallery-placeholder-title {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--warm);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .gallery-placeholder-copy {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .gallery-placeholder-meta {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
+    }
+
+    .gallery-status-note {
+      margin: 0 10px 10px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1.5px dashed rgba(0, 212, 197, 0.28);
+      border-radius: 16px;
+      text-align: center;
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .mode-placeholder-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 0 16px 12px;
+    }
+
+    .mode-placeholder-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 16px;
+      background: linear-gradient(160deg, #ffffff 30%, var(--primary-soft) 100%);
+      border: 1px solid rgba(0, 212, 197, 0.18);
+      border-radius: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .mode-placeholder-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: rgba(0, 212, 197, 0.12);
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .mode-placeholder-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .mode-placeholder-copy {
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    .mode-placeholder-note {
+      margin: 0 16px 18px;
+      padding: 14px 16px;
+      background: rgba(239, 123, 132, 0.08);
+      border: 1px dashed rgba(239, 123, 132, 0.28);
+      border-radius: 16px;
+      text-align: center;
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    /* ===== PRICE BLOCK — PREMIUM ===== */
+    .price-block {
+      background: var(--white);
+      border-radius: 20px;
+      margin: 10px;
+      padding: 28px 22px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .price-block .price-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .price-block .price-now {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--primary-dark);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+
+    .price-block .price-was {
+      font-size: 16px;
+      color: var(--text-muted);
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+
+    .price-block .price-badge {
+      font-size: 12px;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      padding: 5px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 212, 197, 0.15);
+    }
+
+    .price-block .product-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 14px;
+      margin-top: 0;
+    }
+
+    .price-block .rating-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      margin-top: 0;
+    }
+
+    .price-block .stars {
+      color: #F8B84E;
+      letter-spacing: 0.5px;
+    }
+
+    .price-block .stats-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price-block .stat-badge {
+      text-align: center;
+      flex: 1;
+      background: linear-gradient(160deg, var(--bg), var(--white));
+      padding: 14px 8px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .price-block .sb-num {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--warm);
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    .price-block .sb-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* ===== FEATURE CHIPS ===== */
+    .feature-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .feature-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--warm);
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      letter-spacing: 0.2px;
+    }
+
+    .feature-chip-highlight {
+      background: linear-gradient(135deg, var(--primary-soft), #d4faf7);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    /* ===== GUARANTEE BANNER — Premium ===== */
+    .guarantee-banner {
+      margin: 0 10px 20px;
+      background: linear-gradient(160deg, var(--white) 30%, var(--primary-soft) 100%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .guarantee-banner .gb-icon {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .guarantee-banner .gb-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--warm);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .guarantee-banner .gb-desc {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* ===== QUANTITY STEPPER — MODERN ===== */
+    .qty-picker-wrap {
+      padding: 0 16px 20px;
+    }
+
+    .qty-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .qty-unit-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .qty-label {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .qty-unit-price {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .qty-free-ship {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--green);
+      background: #f0fdf4;
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 1px solid #bbf7d0;
+    }
+
+    .qty-stepper {
+      display: flex;
+      width: max-content;
+      margin: 0 auto;
+      align-items: center;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 99px;
+      padding: 6px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .qty-stepper--sm {
+      padding: 4px;
+    }
+
+    .qty-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .qty-stepper--sm .qty-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+    }
+
+    .qty-btn:hover {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      transform: scale(1.08);
+    }
+
+    .qty-btn:active {
+      transform: scale(0.95);
+    }
+
+    .qty-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      transform: scale(1);
+      background: transparent;
+      box-shadow: none;
+      border-color: transparent;
+    }
+
+    .qty-display {
+      min-width: 68px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-num {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--text);
+      display: block;
+      line-height: 1.1;
+    }
+
+    .qty-stepper--sm .qty-num {
+      font-size: 18px;
+    }
+
+    .qty-unit {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .qty-stepper--sm .qty-display {
+      min-width: 50px;
+    }
+
+    .qty-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+      padding: 18px;
+      background: linear-gradient(135deg, var(--primary-soft), #F0FDFA);
+      border-radius: 16px;
+      border: 1.5px dashed rgba(0, 212, 197, 0.3);
+    }
+
+    .qty-total-label {
+      font-size: 14px;
+      color: var(--warm);
+      font-weight: 700;
+    }
+
+    .qty-total-price {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--warm);
+      letter-spacing: -0.5px;
+      transition: color 0.2s;
+    }
+
+    .qty-bonus {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--warm);
+      background: linear-gradient(135deg, var(--primary-soft), #FFF8F0);
+      border: 1.5px dashed rgba(0, 212, 197, 0.3);
+      border-radius: 14px;
+      padding: 14px;
+      animation: bonusPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes bonusPop {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* ===== SECTION HEADERS — Premium ===== */
+    .section-head h2 {
+      font-weight: 900;
+      color: var(--warm);
+      font-size: 17px;
+    }
+
+    /* ===== Q&A — Premium Cards ===== */
+    .qa {
+      border-top-color: var(--border) !important;
+      padding: 16px 20px;
+    }
+
+    .qa-q {
+      font-weight: 700 !important;
+      color: var(--warm) !important;
+      font-size: 13.5px !important;
+    }
+
+    .qa-a {
+      line-height: 1.7 !important;
+    }
+
+    /* ===== TRUST BADGES — Premium ===== */
+    .trust-item {
+      background: var(--white) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: 14px !important;
+      box-shadow: var(--shadow-sm);
+      padding: 16px !important;
+      font-weight: 700 !important;
+      color: var(--warm) !important;
+    }
+
+    /* ===== BOTTOM BAR — Elevated ===== */
+    .bottom-bar {
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06) !important;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .btn-buy {
+      border-radius: 14px !important;
+      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      font-weight: 800 !important;
+      box-shadow: var(--shadow-teal) !important;
+    }
+
+    .btn-add {
+      border-radius: 14px !important;
+      font-weight: 700 !important;
+    }
+
+    /* ===== REVIEW CARDS — Premium ===== */
+    .review {
+      border-top: 1px solid rgba(237, 234, 231, 0.5) !important;
+    }
+
+    .review-author {
+      font-weight: 700 !important;
+      color: var(--warm) !important;
+    }
+
+    .reviews-summary-polished {
+      align-items: stretch !important;
+      gap: 12px !important;
+      padding: 0 16px 16px !important;
+    }
+
+    .reviews-score-card {
+      min-width: 122px;
+      padding: 18px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(0, 212, 197, 0.18);
+      background: linear-gradient(160deg, #ffffff 30%, var(--primary-soft) 100%);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .reviews-stars-lg {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin: 6px 0;
+    }
+
+    .reviews-caption {
+      font-size: 11.5px;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+
+    .review-highlights {
+      flex: 1;
+      display: grid;
+      gap: 8px;
+    }
+
+    .review-highlight {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .review-highlight-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .review-highlight-copy {
+      font-size: 11.5px;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 0 16px 16px;
+    }
+
+    .review-card {
+      border: 1px solid var(--border) !important;
+      border-radius: 18px;
+      padding: 18px;
+      background: linear-gradient(160deg, #ffffff 45%, rgba(232, 250, 249, 0.68) 100%);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .review-card .review-top {
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .review-av-text {
+      background: linear-gradient(135deg, var(--primary-soft), #d4faf7) !important;
+      color: var(--primary-dark);
+      font-size: 12px !important;
+      font-weight: 900 !important;
+      letter-spacing: 0.8px;
+    }
+
+    .review-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .review-author-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .review-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 212, 197, 0.22);
+      background: rgba(0, 212, 197, 0.1);
+      color: var(--primary-dark);
+      font-size: 10.5px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .review-submeta {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .review-card .review-stars {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .review-card .review-body {
+      color: var(--text-secondary);
+    }
+
+    .review-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .review-tag {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--border);
+      color: var(--warm);
+      font-size: 11.5px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* ===== SELLER CARD — Premium ===== */
+    .seller-av {
+      background: linear-gradient(135deg, var(--primary-soft), var(--accent-soft)) !important;
+    }
+
+    .seller-btn {
+      border-radius: 12px !important;
+      border-color: var(--primary) !important;
+      color: var(--primary-dark) !important;
+      font-weight: 700 !important;
+    }
+
+    /* ===== BANK DETAILS — Premium ===== */
+    .bank-details-card {
+      border-color: rgba(0, 212, 197, 0.15) !important;
+      border-radius: 20px !important;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.03) !important;
+    }
+
+    .bank-header {
+      background: linear-gradient(135deg, #1a2332 0%, #2d3748 50%, #1a2332 100%) !important;
+    }
+
+    .bank-value.bank-note {
+      color: var(--primary-dark) !important;
+      background: var(--primary-soft) !important;
+    }
+
+    .bank-amount-item b {
+      color: var(--warm) !important;
+    }
+
+    .bank-amount-item.popular-amount {
+      background: linear-gradient(160deg, rgba(0, 212, 197, 0.06), rgba(0, 212, 197, 0.02)) !important;
+    }
+
+    .bank-amount-item.popular-amount::before {
+      color: var(--primary-dark) !important;
+    }
+
+    .copy-btn {
+      border-radius: 12px !important;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--primary) !important;
+      background: var(--primary-soft) !important;
+      color: var(--primary-dark) !important;
+    }
+
+    /* ===== SELLER CARD — Premium ===== */
+    .seller-name {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .fb-verify {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ===== SECURE PAYMENT — Premium ===== */
+    .secure-payment-wrapper {
+      background: #f0fdf4;
+      border: 1.5px solid #bdf2d0;
+      border-radius: 28px;
+      padding: 12px;
+      margin-top: 14px;
+      box-shadow: 0 4px 15px rgba(22, 163, 74, 0.05);
+    }
+
+    .secure-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #16a34a;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ===== ORDER FORM — Premium ===== */
+    .order-form h2 {
+      color: var(--warm) !important;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--primary) !important;
+      box-shadow: 0 0 0 3px rgba(0, 212, 197, 0.1);
+    }
+
+    /* ===== INFO ROWS — Premium ===== */
+    .info-row .label {
+      color: var(--text-muted) !important;
+      font-weight: 600 !important;
+    }
+
+    .info-row .value {
+      font-weight: 600 !important;
+    }
+
+    /* ===== GALLERY + DOTS ===== */
+    .gallery-dots span.active {
+      background: var(--primary) !important;
+    }
+
+    /* ===== TOAST — Premium ===== */
+    .toast {
+      border-radius: 16px !important;
+      box-shadow: var(--shadow-lg) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  
+  <header class="header" style="position: relative; justify-content: center;">
+    
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 28px; height: 28px; border-radius: 50%; overflow: hidden;">
+        <img src="/baby-chair/store_logo.webp" alt="Bambi Room Logo"
+          style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <span style="font-weight: 800; color: var(--text); font-size: 16px;">Bambi Room | Бэмбигийн Өрөө</span>
+    </div>
+    
+    <a href="#"
+      onclick="event.preventDefault(); trackOrderIntent('header_cart'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
+      style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); text-decoration: none; font-size: 20px; display: flex; align-items: center;">
+      🛒<span class="badge">1</span>
+    </a>
+  </header>
+
+  
+  <div class="gallery" id="gallery">
+    <div class="gallery-item" style="flex: 0 0 100%; width: 100%; aspect-ratio: 1/1;">
+      <img src="/baby-chair/img_hero.png" alt="Олон үйлдэлт хүүхдийн сандал" style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+  </div>
+
+  
+  <section class="price-block">
+    <div class="price-row">
+      <span class="price-now">₮69,000</span>
+      <span class="price-was">₮129,000</span>
+      <span class="price-badge">−47%</span>
+    </div>
+    <h1 class="product-title">Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)</h1>
+    <div class="feature-chips">
+      <span class="feature-chip">🍼 Хооллох</span>
+      <span class="feature-chip">💇 Үс угаах</span>
+      <span class="feature-chip">🦶 Хөл угаах</span>
+      <span class="feature-chip feature-chip-highlight">3 үйлдэлт</span>
+    </div>
+    <div class="rating-row">
+      <span class="stars">★★★★★</span>
+      <span class="rating-text">4.8</span>
+      <span class="rating-divider">·</span>
+      <span class="rating-text">94+ сэтгэгдэл</span>
+      <span class="rating-divider">·</span>
+      <span class="rating-text">564 борлуулсан</span>
+    </div>
+    
+    <div class="stats-row">
+      <div class="stat-badge">
+        <div class="sb-num">564+</div>
+        <div class="sb-label">Борлуулсан</div>
+      </div>
+      <div class="stat-badge">
+        <div class="sb-num">4.8</div>
+        <div class="sb-label">Үнэлгээ</div>
+      </div>
+      <div class="stat-badge">
+        <div class="sb-num">98%</div>
+        <div class="sb-label">Сэтгэл ханамж</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="inline-cta">
+    <button class="cta-scroll-btn"
+      onclick="trackOrderIntent('price_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+      🍼 Одоо захиалах — Хүргэлт үнэгүй
+    </button>
+  </section>
+
+  
+  <section>
+    <div class="promo-strip">
+      <div class="promo-left">
+        <span class="promo-text">🔥 Хямдрал дуусахад</span>
+      </div>
+      <div class="timer">
+        <b id="h">24</b><span class="colon">:</span>
+        <b id="m">00</b><span class="colon">:</span>
+        <b id="s">00</b>
+      </div>
+    </div>
+    <div class="urgency">
+      <span><span class="live-dot"></span>Одоо <b>24 хүн</b> үзэж байна</span>
+      <span class="stock-low">Цөөн үлдлээ!</span>
+    </div>
+  </section>
+
+
+
+  
+  <section>
+    <div class="section-head">
+      <h2>👶 Ээж нарт тулгардаг асуудлууд</h2>
+    </div>
+    <div class="problem-solution">
+      <div class="ps-card">
+        <div class="ps-icon">🏠</div>
+        <div class="ps-text">
+          <h4>Овор хэмжээ ихтэй сандлууд</h4>
+          <p>Хоолны болон угаалгын сандлыг тус тусад нь авбал гэрийн зайг ихээр эзэлдэг.</p>
+        </div>
+      </div>
+      <div class="ps-card">
+        <div class="ps-icon">💦</div>
+        <div class="ps-text">
+          <h4>Үс угаах үеийн бэрхшээл</h4>
+          <p>Хүүхэд үсээ угаалгахдаа дургүйцдэг бөгөөд ус нүд рүү нь орох вий гэж ээжүүд их санаа зовдог.</p>
+        </div>
+      </div>
+      <div class="ps-card">
+        <div class="ps-icon">💸</div>
+        <div class="ps-text">
+          <h4>Тус тусдаа авбал үнэтэй тусна</h4>
+          <p>Хоолны, үс угаах болон хөл угаах сандлыг тус тусад нь авбал ₮150,000 орчим болно.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+  
+  <section>
+    <div class="section-head">
+      <h2>💰 Хэдэн төгрөг хэмнэх вэ?</h2>
+    </div>
+    <div class="savings-section">
+      <div class="savings-grid">
+        <div class="savings-item">
+          <span class="s-name"><span style="color:#FF4B4B; font-size:12px; margin-right:4px;">❌</span>🪑 Хоолны
+            сандал</span>
+          <span class="s-price crossed">₮80,000 — 120,000</span>
+        </div>
+        <div class="savings-item">
+          <span class="s-name"><span style="color:#FF4B4B; font-size:12px; margin-right:4px;">❌</span>💇 Үс угаах
+            сандал</span>
+          <span class="s-price crossed">₮40,000 — 60,000</span>
+        </div>
+        <div class="savings-item">
+          <span class="s-name"><span style="color:#FF4B4B; font-size:12px; margin-right:4px;">❌</span>🦶 Хөл угаах
+            тавиур</span>
+          <span class="s-price crossed">₮30,000 — 50,000</span>
+        </div>
+        <div class="savings-item" style="padding-top:14px; border-top: 2px solid var(--border);">
+          <span class="s-name" style="font-weight:700; color:var(--text);">📊 Нийт зардал</span>
+          <span class="s-price crossed" style="font-size:15px;">₮150,000 — 230,000</span>
+        </div>
+      </div>
+      <div class="savings-total">
+        <div class="st-label"><span style="font-size:14px; margin-right:4px;">✅</span>Олон үйлдэлт сандлын үнэ:</div>
+        <div class="st-amount">₮69,000</div>
+        <div class="st-vs">🎉 ₮80,000 - ₮160,000 хэмнэх боломж!</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="inline-cta cta-savings">
+    <div class="cta-urgency-text">💰 ₮81,000 — ₮161,000 хэмнэх боломж — Зөвхөн энэ долоо хоногт!</div>
+    <button class="cta-scroll-btn"
+      onclick="trackOrderIntent('savings_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+      🔥 Хямдралтай үнээр авах
+    </button>
+  </section>
+
+  <div class="baby-divider">🧸 🧸 🧸</div>
+
+  
+  <section>
+    <div class="section-head">
+      <h2>🛡️ Аюулгүй, найдвартай</h2>
+    </div>
+    <div class="safety-section">
+      <div class="safety-grid">
+        <div class="safety-item">
+          <div class="si-icon">🧪</div>
+          <div class="si-title">BPA-free PP хуванцар</div>
+          <div class="si-desc">Хүүхдэд аюулгүй, хортой бодисгүй материал</div>
+        </div>
+        <div class="safety-item">
+          <div class="si-icon">🔒</div>
+          <div class="si-title">Гулсахгүй суурь</div>
+          <div class="si-desc">Шалан дээр бат суудаг, хүүхэд унахгүй</div>
+        </div>
+        <div class="safety-item">
+          <div class="si-icon">🧽</div>
+          <div class="si-title">Угааж цэвэрлэхэд хялбар</div>
+          <div class="si-desc">Усаар зайлж, алчуураар арчихад л болно</div>
+        </div>
+        <div class="safety-item">
+          <div class="si-icon">⚖️</div>
+          <div class="si-title">75 кг даац</div>
+          <div class="si-desc">0-8 нас хүртэл хэрэглэнэ</div>
+        </div>
+      </div>
+  </section>
+
+  
+  <section>
+    <div class="section-head">
+      <h2>🏠 Яагаад энэхүү сандал танд хэрэгтэй вэ?</h2>
+    </div>
+    <div class="scenario-cards">
+      <div class="scenario-card"
+        style="background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);">
+        <div class="sc-title">🏢 Зай хэмнэнэ</div>
+        <div class="sc-body">Олон зориулалтаар ашиглах боломжтой тул тус тусад нь сандал авах шаардлагагүй. Мөн эвхэж
+          хадгалахад хялбар!</div>
+      </div>
+      <div class="scenario-card"
+        style="background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);">
+        <div class="sc-title">👴 Эмээ, өвөө ч хялбар хэрэглэнэ</div>
+        <div class="sc-body">Ажилдаа явсан үед эмээ, өвөө хүүхдийг харахад энэхүү сандал маш энгийн, хэрэглэхэд хялбар.
+        </div>
+      </div>
+      <div class="scenario-card"
+        style="background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);">
+        <div class="sc-title">❄️ Өдрийн турш ашиглах боломжтой</div>
+        <div class="sc-body">Хооллох, угаалгах зэрэг хүүхдийн өдөр тутмын хэрэгцээг нэг дор шийдсэн тул ээжүүдэд хамгаас
+          ээлтэй.</div>
+      </div>
+      <div class="scenario-card"
+        style="background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);">
+        <div class="sc-title">👶👧 Ах дүү нарт ч хэрэглэнэ</div>
+        <div class="sc-body">0-8 нас хүртэл 75 кг даацтай тул ах дүү нар ээлжлэн хэрэглэж болно. Нэг удаагийн
+          хөрөнгө оруулалт!</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section>
+    <div class="section-head">
+      <h2>📋 Дэлгэрэнгүй</h2>
+    </div>
+    <div class="info-rows">
+      <div class="info-row" style="flex-direction:column; align-items:flex-start; gap:10px;">
+        <div style="display:flex; justify-content:space-between; width:100%;">
+          <span class="label">Материал</span><span class="value">PP хуванцар (BPA-free)</span>
+        </div>
+        <div style="
+          display:flex; align-items:flex-start; gap:10px;
+          background: linear-gradient(135deg, #E8FAF9, #D4FAF7);
+          border: 1.5px solid rgba(0,212,197,0.35);
+          border-left: 4px solid var(--primary);
+          border-radius: 12px;
+          padding: 12px 14px;
+          width: 100%;
+          box-sizing: border-box;
+        ">
+          <span style="font-size:20px; flex-shrink:0; line-height:1;">🛡️</span>
+          <div>
+            <div
+              style="font-size:11.5px; font-weight:800; color:var(--primary-dark); margin-bottom:3px; text-transform:uppercase; letter-spacing:0.4px;">
+              Хүнсний зэрэглэлийн хуванцар</div>
+            <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">Полипропилен (PP) бол хүнсний
+              зэрэглэлийн хуванцар бөгөөд хүүхдийн сав суулга, эмнэлгийн хэрэгсэлд ашигладаг <strong
+                style="color:var(--primary-dark);">аюулгүй материал</strong> юм.</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-row"><span class="label">Насны ангилал</span><span class="value">0-8 нас</span></div>
+      <div class="info-row"><span class="label">Жин даац</span><span class="value">75 кг хүртэл</span></div>
+      <div class="info-row"><span class="label">Өнгө</span><span class="value"> ягаан-цайвар, шар-цэнхэр</span>
+      </div>
+      <div class="info-row"><span class="label">Горим</span><span class="value">Хооллох, үс угаах, хөл угаах</span>
+      </div>
+      <div class="info-row"><span class="label">Хүргэлт</span><span class="value highlight">Үнэгүй 🎉</span></div>
+    </div>
+  </section>
+
+  
+  <section>
+    <div class="section-head">
+      <h2>💬 Ээжүүдийн сэтгэгдэл</h2><span class="see-all">Сонгосон 3</span>
+    </div>
+
+    <div class="review-list">
+      <article class="review review-card">
+        <div class="review-top">
+          <div class="review-av review-av-text">ЭБ</div>
+          <div class="review-meta">
+            <div class="review-author-row">
+              <span class="review-author">Энхтуяа Б.</span>
+              <span class="review-badge">2 настай охинд авсан</span>
+            </div>
+            <div class="review-submeta">Улаанбаатар • 3 өдрийн өмнө</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-body">Охин маань үсээ угаалгах дургүй байдаг байсан ч толгойгоо арагш налуулаад суухад
+          илүү тайван болсон. Хооллохдоо ч давхар ашиглаж байгаа болохоор нэг зүйлээр хоёр ажлаа шийдэж байна.</div>
+        <div class="review-tags">
+          <span class="review-tag">Үс угаахад амар</span>
+          <span class="review-tag">Хооллохдоо давхар ашигласан</span>
+        </div>
+      </article>
+
+      <article class="review review-card">
+        <div class="review-top">
+          <div class="review-av review-av-text">СМ</div>
+          <div class="review-meta">
+            <div class="review-author-row">
+              <span class="review-author">Саран М.</span>
+              <span class="review-badge">Зай багатай байранд тохирсон</span>
+            </div>
+            <div class="review-submeta">ХУД • 5 өдрийн өмнө</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-body">Манайх жижиг талбайтай болохоор тусдаа хоолны сандал, угаалгын суудал авахаас
+          зайлсхийж байсан. Энэ нэг сандлыг өдөр тутам ээлжлээд ашиглаж байгаа нь хамгийн их таалагдсан.</div>
+        <div class="review-tags">
+          <span class="review-tag">Зай хэмнэсэн</span>
+          <span class="review-tag">Нэг дор 3 хэрэглээ</span>
+        </div>
+      </article>
+
+      <article class="review review-card">
+        <div class="review-top">
+          <div class="review-av review-av-text">ОД</div>
+          <div class="review-meta">
+            <div class="review-author-row">
+              <span class="review-author">Oyun Oyun</span>
+              <span class="review-badge">Өдөр тутам ашиглаж байна</span>
+            </div>
+            <div class="review-submeta">Дархан • 2 долоо хоногийн өмнө</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-body">Эхэндээ үс угаахад л зориулна гэж бодож байлаа. Харин хөл угаах, түр суулгах үед ч
+          хэрэгтэй юм байна. Бас авсаархан амар эд байна..</div>
+        <div class="review-tags">
+          <span class="review-tag">Арчилгаа амар</span>
+          <span class="review-tag">Өдөр тутмын хэрэглээ</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  
+  <section class="inline-cta cta-reviews">
+    <div class="cta-social-text">✅ 564+ ээж аль хэдийн захиалсан</div>
+    <button class="cta-scroll-btn"
+      onclick="trackOrderIntent('reviews_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+      👶 Хүүхэддээ авах →
+    </button>
+  </section>
+
+  
+  <section>
+    <div class="section-head">
+      <h2>❓ Асуулт & Хариулт</h2>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Хэдэн настай хүүхдэд тохирох вэ?</div>
+      <div class="qa-a">0-8 нас хүртэл, 75 кг хүртэл даацтай.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Хүүхдэд аюулгүй юу?</div>
+      <div class="qa-a">Тийм, BPA-free PP хуванцраар хийгдсэн. Хортой бодисгүй, гулсахгүй суурьтай, тогтвортой
+        бүтэцтэй.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Угааж цэвэрлэхэд хэцүү юу?</div>
+      <div class="qa-a">Маш хялбар. Усаар зайлж, алчуураар арчихад л болно. Ямар ч тусгай цэвэрлэгээ шаарддаггүй.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Хүргэлт хэдэн хоногт ирэх вэ?</div>
+      <div class="qa-a">УБ хотод дансаар шилжүүлбэл өдөртөө, бэлнээр төлбөл 1-2 хоног. Орон нутагт 3-5 хоног.</div>
+    </div>
+  </section>
+
+  <div class="baby-divider">🐾 🐾 🐾</div>
+
+  
+  <section>
+    <div class="seller">
+      <div class="seller-av" style="background:none; border-radius: 50%; overflow: hidden; padding: 0;">
+        <img src="/baby-chair/store_logo.webp" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="seller-body">
+        <div class="seller-name">Bambi Room <svg class="fb-verify" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" fill="#1877F2">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg></div>
+        <div class="seller-meta">Ухаалаг ээжүүдэд зориулав</div>
+      </div>
+      <button class="seller-btn"
+        onclick="window.open('https://www.facebook.com/bambibabyroom', '_blank')">Дагах</button>
+    </div>
+  </section>
+
+  
+  <section id="order-section">
+    <div class="order-form">
+      <h2>📦 Захиалга өгөх</h2>
+      <div class="subtitle">3-хан алхмаар хялбар захиалаарай 👶</div>
+
+      <div style="
+        margin: 8px 0 18px;
+        background: rgba(0,212,197,0.07);
+        border: 2px solid rgba(0,212,197,0.45);
+        border-radius: 18px;
+        padding: 18px 18px 18px 16px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        position: relative;
+        overflow: hidden;
+      ">
+        <span style="
+          position: absolute; top: -30px; right: -30px;
+          width: 120px; height: 120px;
+          background: rgba(0,212,197,0.06);
+          border-radius: 50%;
+        "></span>
+        <div style="
+          width: 38px; height: 38px; border-radius: 50%;
+          background: rgba(0,212,197,0.15);
+          border: 2px solid var(--primary);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 18px; font-weight: 900; color: var(--primary-dark);
+          flex-shrink: 0;
+        ">1</div>
+        <div style="flex:1;">
+          <div
+            style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3; margin-bottom: 3px;">
+            Тоогоо оруулна уу
+          </div>
+          <div style="font-size: 12px; color: var(--text-secondary); font-weight: 600; line-height: 1.4;">
+            🧸 Авах ширхэгийн тоогоо сонгоно уу
+          </div>
+        </div>
+        <div style="font-size: 22px; color: var(--primary); flex-shrink: 0;">↓</div>
+      </div>
+      <div class="form-group">
+        
+        <div class="qty-stepper qty-stepper--sm">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <div class="qty-display">
+            <span class="qty-num" id="qtyNumForm">1</span>
+            <span class="qty-unit">ширхэг</span>
+          </div>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+        <div style="text-align:center; margin-top:8px; font-size:13px; color:var(--primary-dark); font-weight:700;"
+          id="formQtyTotal">Нийт: ₮69,000</div>
+      </div>
+
+      <div style="
+        margin: 8px 0 18px;
+        background: rgba(0,212,197,0.07);
+        border: 2px solid rgba(0,212,197,0.45);
+        border-radius: 18px;
+        padding: 18px 18px 18px 16px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        position: relative;
+        overflow: hidden;
+      ">
+        <span style="
+          position: absolute; top: -30px; right: -30px;
+          width: 120px; height: 120px;
+          background: rgba(0,212,197,0.06);
+          border-radius: 50%;
+        "></span>
+        <div style="
+          width: 38px; height: 38px; border-radius: 50%;
+          background: rgba(0,212,197,0.15);
+          border: 2px solid var(--primary);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 18px; font-weight: 900; color: var(--primary-dark);
+          flex-shrink: 0;
+        ">2</div>
+        <div style="flex:1;">
+          <div
+            style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3; margin-bottom: 3px;">
+            Төлбөрийн нөхцөл сонгох
+          </div>
+          <div style="font-size: 12px; color: var(--text-secondary); font-weight: 600; line-height: 1.4;">
+            💳 Дансаар шилжүүлэх эсвэл хүргүүлж авахдаа төлөх
+          </div>
+        </div>
+        <div style="font-size: 22px; color: var(--primary); flex-shrink: 0;">↓</div>
+      </div>
+
+      <div class="payment-options">
+        <label class="payment-option-label active" id="lbl-transfer">
+          <input type="radio" name="payment_method" value="Дансаар шилжүүлэх" checked onchange="togglePayment()">
+          <div class="payment-radio"></div>
+          <div class="payment-info">
+            <div class="payment-title">Дансаар шилжүүлэх</div>
+            <div class="payment-desc">Өдөртөө хүргэгдэнэ 🚚</div>
+          </div>
+        </label>
+
+        <label class="payment-option-label" id="lbl-cod">
+          <input type="radio" name="payment_method" value="Хүргүүлж авахдаа төлөх" onchange="togglePayment()">
+          <div class="payment-radio"></div>
+          <div class="payment-info">
+            <div class="payment-title">Хүргүүлж авахдаа төлөх (Бэлнээр)</div>
+            <div class="payment-desc">1-2 хоногийн дотор хүргэгдэнэ</div>
+          </div>
+        </label>
+      </div>
+
+      <div class="cod-message" id="codDetails">
+        📦 Та бараагаа хүлээж авах үедээ бэлнээр эсвэл түрүүлж утсаар холбогдох үед төлбөрөө хийх боломжтой.
+        Хүргэлт 1-2 хоногт таны хаягаар очих болно.
+      </div>
+
+      <div id="transferSection">
+        <div class="secure-payment-wrapper">
+          <div class="secure-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            Баталгаат төлбөр тооцоо
+          </div>
+          <div class="bank-details-card" style="margin-bottom: 0;">
+            <div class="bank-header">
+              <span class="bank-icon">🏦</span>
+              <span class="bank-name">ХААН Банк</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-label">Дансны дугаар</span>
+              <div class="bank-value-row">
+                <span class="bank-value" id="bankAccount">5041 0338 49</span>
+                <button class="copy-btn" onclick="trackCopyBank(); copyBank()" id="copyBtn">📋 Хуулах</button>
+              </div>
+            </div>
+            <div class="bank-row">
+              <span class="bank-label">Данс эзэмшигч</span>
+              <span class="bank-value">ГАНЦЭЦЭГ.Ч</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-label">Гүйлгээний утга</span>
+              <span class="bank-value bank-note">Нэр + утасны дугаар</span>
+            </div>
+            <div class="bank-row" style="background: #fffbeb; border-top: 1px solid rgba(0,0,0,0.04);">
+              <div style="font-size: 13px; color: #92400e; line-height: 1.5;">
+                ⚠️ <b>АНХААР:</b> Гүйлгээний утга дээрээ өөрийн <u>утасны дугаар, нэрээ</u> заавал зөв бичээрэй!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="
+        margin: 8px 0 18px;
+        background: rgba(0,212,197,0.07);
+        border: 2px solid rgba(0,212,197,0.45);
+        border-radius: 18px;
+        padding: 18px 18px 18px 16px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        position: relative;
+        overflow: hidden;
+      ">
+        
+        <span style="
+          position: absolute; top: -30px; right: -30px;
+          width: 120px; height: 120px;
+          background: rgba(0,212,197,0.06);
+          border-radius: 50%;
+        "></span>
+        
+        <div style="
+          width: 38px; height: 38px; border-radius: 50%;
+          background: rgba(0,212,197,0.15);
+          border: 2px solid var(--primary);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 18px; font-weight: 900; color: var(--primary-dark);
+          flex-shrink: 0;
+        ">3</div>
+        
+        <div style="flex:1;">
+          <div
+            style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3; margin-bottom: 3px;">
+            Мэдээллээ бөглөж баталгаажуулна уу
+          </div>
+          <div style="font-size: 12px; color: var(--text-secondary); font-weight: 600; line-height: 1.4;">
+            ✍️ Нэр, утас, хаягаа оруулаад захиалгаа баталгаажуулаарай!
+          </div>
+        </div>
+        
+        <div style="font-size: 22px; color: var(--primary); flex-shrink: 0;">↓</div>
+      </div>
+
+      <div class="form-group">
+        <label>Нэр</label>
+        <input type="text" placeholder="Таны нэр" id="fname">
+      </div>
+      <div class="form-group">
+        <label>Утасны дугаар</label>
+        <input type="tel" placeholder="9911 2233" id="fphone">
+      </div>
+      <div class="form-group">
+        <label>Хаяг (дүүрэг, хороо)</label>
+        <input type="text" placeholder="Баянгол, 4-р хороо" id="faddr">
+      </div>
+
+      <button class="submit-btn" id="submitBtn">✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ</button>
+      <div
+        style="text-align:center; margin-top:14px; padding:12px 16px; background:linear-gradient(135deg, #F0FDFA, #ECFDF5); border-radius:12px; border:1.5px solid #bbf7d0; font-size:14px; font-weight:800; color:#16a34a; letter-spacing:0.5px;">
+        🚚 ӨНӨӨДӨР ЗАХИАЛБАЛ ХҮРГЭЛТ ҮНЭГҮЙ</div>
+
+      <div class="payment-note">
+        <b>💡 Хэрхэн ажиллах вэ?</b>
+        <p>Шилжүүлэг хийсний дараа захиалгаа баталгаажуулснаар бид тантай 24 цагийн дотор холбогдож, хүргэлтийн мэдээлэл
+          өгнө.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="bottom-bar">
+    <button class="btn-add"
+      onclick="trackOrderIntent('bottom_add'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Сагслах</button>
+    <button class="btn-buy"
+      onclick="trackOrderIntent('bottom_buy'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Захиалах</button>
+  </div>
+
+  <div class="toast-container" id="toasts"></div>
+
+  <script>
+    // Buyers toast notifications — Mongolian mom/family names with districts
+    const buyers = [
+      { name: 'Оюунаа Б.', loc: 'БГД' },
+      { name: 'Нарангэрэл Д.', loc: 'ХУД' },
+      { name: 'Төгөлдөр О.', loc: 'Дархан' },
+      { name: 'Удвал С.', loc: 'СБД' },
+      { name: 'Ганбаатар Г.', loc: 'ЧД' },
+      { name: 'Батцэцэг Т.', loc: 'Эрдэнэт' },
+      { name: 'Энхтуяа М.', loc: 'БЗД' },
+      { name: 'Цолмон Б.', loc: 'СХД' },
+      { name: 'Алтанцэцэг Д.', loc: 'ХУД' },
+      { name: 'Золзаяа Н.', loc: 'БГД' },
+      { name: 'Мөнхзул О.', loc: 'ЧД' },
+      { name: 'Сарнай Б.', loc: 'Дархан' },
+    ];
+    let lastBuyerIdx = -1;
+    function showToast() {
+      let idx;
+      do { idx = Math.floor(Math.random() * buyers.length); } while (idx === lastBuyerIdx);
+      lastBuyerIdx = idx;
+      const b = buyers[idx];
+      const ago = (1 + Math.floor(Math.random() * 28)) + ' мин';
+      const tc = document.getElementById('toasts');
+      tc.innerHTML = `<div class="toast"><div class="av">👶</div><span><span class="name">${b.name}</span> (${b.loc}) захиалга өглөө</span><span class="time">${ago} өмнө</span></div>`;
+      setTimeout(() => { tc.innerHTML = ''; }, 4000);
+    }
+    setTimeout(() => { showToast(); setInterval(showToast, 6000 + Math.random() * 6000); }, 5000);
+
+    // ===== QUANTITY STEPPER =====
+    window.orderQty = 1;
+    const UNIT_PRICE = 69000;
+
+    function changeQty(delta) {
+      const newQty = window.orderQty + delta;
+      if (newQty < 1) return; // floor at 1
+
+      window.orderQty = newQty;
+
+      // Update all qty number displays
+      document.querySelectorAll('.qty-num').forEach(el => el.textContent = newQty);
+
+      // Update minus button state
+      document.querySelectorAll('.qty-stepper .qty-btn').forEach((btn) => {
+        if (btn.textContent.trim() === '−') btn.disabled = (newQty <= 1);
+      });
+
+      // Format price nicely
+      const total = newQty * UNIT_PRICE;
+      const formatted = '₮' + total.toLocaleString('mn-MN');
+
+      // Update form total
+      const formTotal = document.getElementById('formQtyTotal');
+      if (formTotal) formTotal.textContent = 'Нийт: ' + formatted;
+    }
+
+    // Init: disable minus at start
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.qty-stepper .qty-btn').forEach(btn => {
+        if (btn.textContent.trim() === '−') btn.disabled = true;
+      });
+    });
+
+    // Toggle Payment UI
+    function togglePayment() {
+      const isCod = document.getElementById('lbl-cod').querySelector('input').checked;
+
+      if (isCod) {
+        document.getElementById('lbl-cod').classList.add('active');
+        document.getElementById('lbl-transfer').classList.remove('active');
+        document.getElementById('codDetails').style.display = 'block';
+        document.getElementById('transferSection').style.display = 'none';
+      } else {
+        document.getElementById('lbl-transfer').classList.add('active');
+        document.getElementById('lbl-cod').classList.remove('active');
+        document.getElementById('codDetails').style.display = 'none';
+        document.getElementById('transferSection').style.display = 'block';
+      }
+    }
+
+    // Form submit → Telegram Bot
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      const btn = document.getElementById('submitBtn');
+      if (btn.disabled) return;
+      const name = document.getElementById('fname').value.trim();
+      const phone = document.getElementById('fphone').value.trim();
+      const addr = document.getElementById('faddr').value.trim();
+      const tier = window.orderQty + ' ширхэг — ₮' + (window.orderQty * 69000).toLocaleString();
+
+      const payMethodEls = document.getElementsByName('payment_method');
+      let paymentMethod = 'Дансаар шилжүүлэх';
+      for (const el of payMethodEls) {
+        if (el.checked) {
+          paymentMethod = el.value;
+          break;
+        }
+      }
+
+      if (!name || !phone || !addr) {
+        alert('Нэр, утас, хаягаа бүрэн бөглөнө үү!');
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = '⏳ Илгээж байна...';
+      btn.style.opacity = '0.6';
+
+      const TELEGRAM_BOT_TOKEN = '8236966311:AAGYywSNeZA8LAAGWWsB6DflqqmF_K6ZdsY';
+      const TELEGRAM_CHAT_ID = '8238910607';
+
+      const text = `📦 Шинэ захиалга!\n\n👤 Нэр: ${name}\n📱 Утас: ${phone}\n📍 Хаяг: ${addr}\n📌 ${tier}\n💳 Төлбөр: ${paymentMethod}\n\n⏰ ${new Date().toLocaleString('mn-MN')}`;
+
+      fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: text,
+          parse_mode: 'HTML'
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.ok) {
+          btn.textContent = '✅ Захиалга амжилттай илгээгдлээ!';
+          btn.style.background = '#16a34a';
+          // Dispatch tracking event
+          if (window.dispatchTrackingEvent) {
+            window.dispatchTrackingEvent('lead_submit', { payment_method: paymentMethod });
+          }
+          setTimeout(() => {
+            btn.disabled = false;
+            btn.textContent = '✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
+            btn.style.opacity = '1';
+            btn.style.background = '';
+            // Clear form
+            document.getElementById('fname').value = '';
+            document.getElementById('fphone').value = '';
+            document.getElementById('faddr').value = '';
+          }, 4000);
+        } else {
+          throw new Error('Telegram API error');
+        }
+      })
+      .catch(() => {
+        btn.textContent = '❌ Алдаа гарлаа. Дахин оролдоно уу.';
+        btn.style.background = '#ef4444';
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = '✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
+          btn.style.opacity = '1';
+          btn.style.background = '';
+        }, 3000);
+      });
+    });
+  </script>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
