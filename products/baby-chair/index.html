@@ -1600,12 +1600,12 @@
       <span class="rating-divider">·</span>
       <span class="rating-text">94+ сэтгэгдэл</span>
       <span class="rating-divider">·</span>
-      <span class="rating-text">564 борлуулсан</span>
+      <span class="rating-text"><span id="salesCountText1">564</span> борлуулсан</span>
     </div>
     
     <div class="stats-row">
       <div class="stat-badge">
-        <div class="sb-num">564+</div>
+        <div class="sb-num"><span id="salesCountText2">564</span>+</div>
         <div class="sb-label">Борлуулсан</div>
       </div>
       <div class="stat-badge">
@@ -1845,7 +1845,7 @@
           <div class="review-meta">
             <div class="review-author-row">
               <span class="review-author">Энхтуяа Б.</span>
-              <span class="review-badge">2 настай охинд авсан</span>
+              <span class="review-badge">3 настай охинд авсан</span>
             </div>
             <div class="review-submeta">Улаанбаатар • 3 өдрийн өмнө</div>
           </div>
@@ -1907,7 +1907,7 @@
 
   
   <section class="inline-cta cta-reviews">
-    <div class="cta-social-text">✅ 564+ ээж аль хэдийн захиалсан</div>
+    <div class="cta-social-text">✅ <span id="salesCountText3">564</span>+ ээж аль хэдийн захиалсан</div>
     <button class="cta-scroll-btn"
       onclick="trackOrderIntent('reviews_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
       👶 Хүүхэддээ авах →
@@ -2362,14 +2362,38 @@
     <div style="font-weight:600;color:#6B6560;margin-bottom:4px;font-size:13px;">Bambi Room</div>
     <div>Асуулт, санал хүсэлт байвал холбогдоорой</div>
     <div style="margin-top:6px;">
-      📧 <a href="mailto:bambiroom.mn@gmail.com" style="color:#00B4A6;text-decoration:none;">bambiroom.mn@gmail.com</a>
+      📧 <a href="mailto:davaa.art.ai@gmail.com" style="color:#00B4A6;text-decoration:none;">davaa.art.ai@gmail.com</a>
     </div>
     <div style="margin-top:4px;">
-      📞 <a href="tel:+97699112233" style="color:#00B4A6;text-decoration:none;">9911-2233</a>
+      📞 <a href="tel:+97696870870" style="color:#00B4A6;text-decoration:none;">96870870</a>
     </div>
     <div style="margin-top:10px;font-size:10px;color:#C5C0BB;">© 2025 Bambi Room. Бүх эрх хуулиар хамгаалагдсан.</div>
   </footer>
 
+  <script>
+    (function() {
+      // Dynamic daily sales logic
+      const BASE_SALES = 564;
+      const LAUNCH_DATE = new Date('2026-03-01T00:00:00Z').getTime(); 
+      const now = Date.now();
+      
+      let daysPassed = Math.floor((now - LAUNCH_DATE) / (1000 * 60 * 60 * 24));
+      if (daysPassed < 0) daysPassed = 0;
+      
+      let totalSales = BASE_SALES;
+      for (let i = 0; i < daysPassed; i++) {
+          // pseudo-random using 'i' as seed (so it doesn't change on refresh)
+          let pseudoRandom = Math.sin(i + 123) * 10000;
+          let dailySales = Math.floor((pseudoRandom - Math.floor(pseudoRandom)) * 4) + 1; // 1 to 4 sales
+          totalSales += dailySales;
+      }
+
+      ['salesCountText1', 'salesCountText2', 'salesCountText3'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = totalSales;
+      });
+    })();
+  </script>
 </body>
 
 </html>
