@@ -4,7 +4,7 @@ import { resolve } from 'path';
 export default defineConfig({
   // Base public path for GitHub Pages deployment. 
   // Change to '/YOUR_REPOSITORY_NAME/' for gh-pages, or keep '/' if using custom domain.
-  base: '/dropship-mn/',
+  base: '/bambiroom/',
   build: {
     rollupOptions: {
       input: {
