@@ -42,27 +42,22 @@ window.copyBank = function() {
   const accEl = document.getElementById('bankAccount');
   if (!accEl) return;
   const acc = accEl.textContent.replace(/\s/g, '');
-  navigator.clipboard.writeText(acc).then(() => {
-    const btn = document.getElementById('copyBtn');
-    btn.textContent = '✅ Хуулсан!';
+  const btn = document.getElementById('copyBtn');
+  const originalHTML = btn.innerHTML;
+  function showCopied() {
+    btn.innerHTML = '✅ Хуулсан!';
     btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = '📋 Хуулах'; btn.classList.remove('copied'); }, 2000);
-  }).catch(() => {
+    setTimeout(() => { btn.innerHTML = originalHTML; btn.classList.remove('copied'); }, 2000);
+  }
+  navigator.clipboard.writeText(acc).then(showCopied).catch(() => {
     const t = document.createElement('textarea');
     t.value = acc; document.body.appendChild(t); t.select();
     document.execCommand('copy'); document.body.removeChild(t);
-    const btn = document.getElementById('copyBtn');
-    btn.textContent = '✅ Хуулсан!';
-    setTimeout(() => { btn.textContent = '📋 Хуулах'; }, 2000);
+    showCopied();
   });
 };
 
 export function initTimer() {
-  const hEl = document.getElementById('h');
-  const mEl = document.getElementById('m');
-  const sEl = document.getElementById('s');
-  if (!hEl || !mEl || !sEl) return;
-
   const storageKey = 'timer_end_' + window.location.pathname;
   let endTime = localStorage.getItem(storageKey);
 
@@ -84,13 +79,13 @@ export function initTimer() {
     }
 
     const totalSeconds = Math.floor(remaining / 1000);
-    const h = Math.floor(totalSeconds / 3600);
-    const m = Math.floor((totalSeconds % 3600) / 60);
-    const s = totalSeconds % 60;
+    const h = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+    const m = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+    const s = String(totalSeconds % 60).padStart(2, '0');
 
-    hEl.textContent = String(h).padStart(2, '0');
-    mEl.textContent = String(m).padStart(2, '0');
-    sEl.textContent = String(s).padStart(2, '0');
+    document.querySelectorAll('.timer-h, #h').forEach(el => el.textContent = h);
+    document.querySelectorAll('.timer-m, #m').forEach(el => el.textContent = m);
+    document.querySelectorAll('.timer-s, #s').forEach(el => el.textContent = s);
   }
 
   update();
