@@ -1,3 +1,6 @@
+// deno-lint-ignore-file
+/* eslint-disable no-var */
+declare const Deno: { serve: (handler: (req: Request) => Promise<Response> | Response) => void; env: { get: (key: string) => string | undefined } };
 // supabase/functions/telegram-order/index.ts
 // Forwards order data to a Telegram bot
 
@@ -52,14 +55,17 @@ Deno.serve(async (req: Request) => {
       });
     }
 
-    const message = `🛒 *Шинэ захиалга!*
-
-👤 *Нэр:* ${name || 'Тодорхойгүй'}
-📱 *Утас:* ${phone}
-📍 *Хаяг:* ${addr}
-📦 *Захиалга:* ${tier}
-💳 *Төлбөр:* ${paymentMethod || 'Тодорхойгүй'}
-🕐 *Огноо:* ${new Date().toLocaleString('mn-MN', { timeZone: 'Asia/Ulaanbaatar' })}`;
+    // Use plain text to avoid Markdown/HTML parsing issues with special characters
+    const message = [
+      '🛒 Шинэ захиалга!',
+      '',
+      '👤 Нэр: ' + (name || 'Тодорхойгүй'),
+      '📱 Утас: ' + phone,
+      '📍 Хаяг: ' + addr,
+      '📦 Захиалга: ' + tier,
+      '💳 Төлбөр: ' + (paymentMethod || 'Тодорхойгүй'),
+      '🕐 Огноо: ' + new Date().toLocaleString('mn-MN', { timeZone: 'Asia/Ulaanbaatar' }),
+    ].join('\n');
 
     const tgRes = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       method: 'POST',
@@ -67,7 +73,6 @@ Deno.serve(async (req: Request) => {
       body: JSON.stringify({
         chat_id: CHAT_ID,
         text: message,
-        parse_mode: 'Markdown',
       }),
     });
 
@@ -79,15 +84,15 @@ Deno.serve(async (req: Request) => {
         headers: { ...getCorsHeaders(req), 'Content-Type': 'application/json' },
       });
     } else {
-      console.error('Telegram API error:', tgData);
-      return new Response(JSON.stringify({ ok: false, error: 'Telegram send failed' }), {
+      console.error('Telegram API error:', JSON.stringify(tgData));
+      return new Response(JSON.stringify({ ok: false, error: 'Telegram: ' + (tgData.description || 'Unknown error') }), {
         status: 500,
         headers: { ...getCorsHeaders(req), 'Content-Type': 'application/json' },
       });
     }
   } catch (err) {
     console.error('Error:', err);
-    return new Response(JSON.stringify({ ok: false, error: 'Internal error' }), {
+    return new Response(JSON.stringify({ ok: false, error: String(err) }), {
       status: 500,
       headers: { ...getCorsHeaders(req), 'Content-Type': 'application/json' },
     });
