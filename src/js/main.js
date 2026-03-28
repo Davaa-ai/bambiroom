@@ -45,7 +45,7 @@ window.copyBank = function() {
   const btn = document.getElementById('copyBtn');
   const originalHTML = btn.innerHTML;
   function showCopied() {
-    btn.innerHTML = '✅ Хуулсан!';
+    btn.innerHTML = '<i class="hgi-stroke hgi-tick-01" style="font-size: 15px;"></i> Хуулсан';
     btn.classList.add('copied');
     setTimeout(() => { btn.innerHTML = originalHTML; btn.classList.remove('copied'); }, 2000);
   }

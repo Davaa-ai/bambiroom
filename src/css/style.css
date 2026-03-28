@@ -1355,23 +1355,9 @@ section {
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-.copy-btn:hover {
-  border-color: var(--primary);
-  background: var(--primary-soft);
-  color: var(--primary-dark, var(--primary));
-  box-shadow: 0 4px 12px rgba(0,212,197,0.12);
-  transform: translateY(-1px);
-}
-
-.copy-btn:active {
-  transform: scale(0.95) translateY(0);
-}
 
 .copy-btn.copied {
-  background: linear-gradient(135deg, #16a34a, #15803d);
-  color: #fff;
-  border-color: #16a34a;
-  box-shadow: 0 4px 12px rgba(22,163,74,0.25);
+  color: #15803d;
 }
 
 /* Bank amount tiers */
